@@ -697,7 +697,7 @@ namespace std::uc {
     template<
       format FromFormat2,
       format ToFormat2,
-      code_unit_iter<FromFormat2> I2,
+      input_iterator I2,
       sentinel_for<I2> S2,
       transcoding_error_handler ErrorHandler2>
     friend class utf_iterator;
