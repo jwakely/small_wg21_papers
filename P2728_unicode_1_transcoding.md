@@ -662,7 +662,7 @@ namespace std::uc {
       }
     }
 
-    friend constexpr bool operator==(utf_iterator lhs, S rhs)
+    friend constexpr bool operator==(utf_iterator lhs, S rhs) {
       if constexpr (forward_iterator<I>) {
         return lhs.curr() == rhs;
       } else {
