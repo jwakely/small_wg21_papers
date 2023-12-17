@@ -1462,6 +1462,8 @@ namespace std::uc {
       }
     }
 
+    constexpr bool empty() const { return ranges::empty(@*base_@*); }
+
     friend ostream & operator<<(ostream & os, utf_view v);
     friend wostream & operator<<(wostream & os, utf_view v);
   };
@@ -1560,6 +1562,12 @@ for (char8_t c : s | std::uc::as_utf8)
   cout << (char)c << ' '; // prints i s   w e i r d . 
 ```
 — end example\]
+
+`utf_view`'s implementation of the `empty()` member function is more efficient than the
+one provided by `view_interface`, since `view_interface`'s implementation will construct
+`utf_view::begin()` and `utf_view::end()` and compare them, whereas we can simply use the
+underlying range's `empty()`, since a `utf_view` is empty if and only if its underlying
+range is empty.
 
 The `ostream` and `wostream` stream operators transcode the `utf_view` to
 UTF-8 and UTF-16, respectively (if transcoding is needed).  The `wostream`
