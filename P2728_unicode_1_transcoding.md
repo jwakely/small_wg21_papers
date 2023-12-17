@@ -472,7 +472,7 @@ namespace std {
   struct null_sentinel_t {
     template<input_iterator I>
       requires default_initializable<iter_value_t<I>> &&
-               equality_comparable<iter_reference_t<I>, iter_value_t<I>>
+               equality_comparable_with<iter_reference_t<I>, iter_value_t<I>>
     friend constexpr auto operator==(I it, null_sentinel_t) { return *it == iter_value_t<I>{}; }
   };
 
