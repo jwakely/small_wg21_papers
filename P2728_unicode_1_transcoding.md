@@ -8,6 +8,8 @@ audience:
 author:
   - name: Zach Laine
     email: <whatwasthataddress@gmail.com>
+  - name: Eddie Nolan
+    email: <eddiejnolan@gmail.com>
 toc: true
 monofont: "DejaVu Sans Mono"
 
