@@ -194,7 +194,7 @@ them to UTF-8.  The problem is that ICU's code point type is `int`.  Since
 data.
 
 ```cpp
-// A generic function that accepts sequences of UTF-16.
+// A generic function that accepts sequences of UTF-8.
 template<std::uc::utf8_range R>
 void process_input(R r);
 
