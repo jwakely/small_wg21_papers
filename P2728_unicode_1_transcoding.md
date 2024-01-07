@@ -183,7 +183,7 @@ process_input(
 
 // Even more conveniently:
 auto const utf16_view = input | std::uc::as_utf16;
-process_input(utf16_view.begin(), utf16.end());
+process_input(utf16_view.begin(), utf16_view.end());
 ```
 
 ## Case 3: Adapt a range of non-character-type values
