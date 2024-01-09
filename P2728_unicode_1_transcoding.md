@@ -69,7 +69,7 @@ monofont: "DejaVu Sans Mono"
 
 ## Changes since R5
 
-- Simplify the complicated constraint on the compariason operator for
+- Simplify the complicated constraint on the comparison operator for
   `null_sentinel_t`.
 - Introduce `ranges::project_view`, and inplement `charN_view`s in terms of
   that.
